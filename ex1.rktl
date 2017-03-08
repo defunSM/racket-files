@@ -185,3 +185,16 @@
     [(start end step) (for/list ([k (in-range start end step)]) k)]))
 
 (range 100 200 5)
+
+(define salutation
+  (let ([r (random 3)])
+    (list-ref '("Hi" "Hello" "Greetings") r)))
+
+(define (greet name)
+  (string-append salutation ", " name))
+
+(greet "Salman")
+
+(error "None")
+
+(null? '())
