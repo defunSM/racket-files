@@ -1,4 +1,4 @@
-#lang slideshow
+#lang racket
 
 (colorize (circle 100) "red")
 
@@ -198,3 +198,18 @@
 (error "None")
 
 (null? '())
+
+(define (qsort1 s)
+  (cond [(or (empty? s) (empty? (rest s))) s]
+        [else (let*-values ([(p) (first s)]
+                            [(split) (lambda (x) (< x p))]
+                            [(s< s>) (partition split (rest s))])
+                (append (qsort1 s<) (list p) (qsort1 s>)))]))
+
+(qsort1 '(1 2 5 2 5 10 3 11 6 101))
+
+(partition (lambda (x) (< x 10)) '(1 2 3 4 5 10 11 12))
+
+(empty? #f)
+
+(require racket)
