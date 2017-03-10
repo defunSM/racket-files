@@ -178,6 +178,8 @@
 
 ;; Trying to be like the range from clojure.
 
+(require racket)
+
 (define range
   (case-lambda
     [(end) (for/list ([k (in-range end)]) k)]
@@ -213,3 +215,14 @@
 (empty? #f)
 
 (require racket)
+
+(define (dot-product a b)
+  (map * a b))
+
+(define (cross-product a b)
+  (get ))
+
+
+(dot-product '(1 2 3) '(4 5 6))
+
+(map * '(1 2 3) '(1 2 3))
