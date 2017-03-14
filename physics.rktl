@@ -1,6 +1,7 @@
 (require racket)
 
 ;; Accept optional parameters that take in values and determine the equation to be used.
+;; list out all of the equations.
 
 (define charge-of-electron 1.6e-19)
 (define mass-of-electron 8.) ;; define this later

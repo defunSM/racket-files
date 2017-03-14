@@ -226,3 +226,27 @@
 (dot-product '(1 2 3) '(4 5 6))
 
 (map * '(1 2 3) '(1 2 3))
+
+(define Rc 0.475)
+(define Ri 0.570)
+(define ac 3.9e-3)
+(define ai 5.0e-3)
+
+(+ (/ (- Rc Ri) (- (* Ri ai) (* Rc ac))) 20)
+
+(struct student (name id# dorm) #:transparent)
+
+(define sophomore3 (student 'David 100234 'PG))
+
+(student-dorm sophomore3)
+
+(student? sophomore3)
+
+(require racket)
+
+(define (my-length a-list)
+  (if (empty? a-list)
+      0
+      (add1 (my-length (rest a-list)))))
+
+(my-length '(1 2 3 4 5))
