@@ -250,3 +250,15 @@
       (add1 (my-length (rest a-list)))))
 
 (my-length '(1 2 3 4 5))
+
+(require rackunit)
+
+(check-equal? (add1 5) 7)
+
+(check-pred number? 'sa)
+
+(define WIDTH 75)
+(define HEIGHT 100)
+
+(define X-CENTER (quotient WIDTH 3))
+(define Y-CENTER (quotient HEIGHT 2))
