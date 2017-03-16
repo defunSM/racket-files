@@ -262,3 +262,46 @@
 
 (define X-CENTER (quotient WIDTH 3))
 (define Y-CENTER (quotient HEIGHT 2))
+
+(struct player (health agility strength) #:mutable)
+
+(define player1 (player 1 2 3))
+
+(set-player-health! player1 33)
+
+(player-health player1)
+
+(require racket)
+(require rackunit)
+
+(define (player-update! setter selector mx)
+  (lambda (player delta)
+    (setter player (interval+ (selector player) delta mx))))
+
+(interval+ (player1 player) delta mx)
+
+(player-update! set-player-health! player1 100)
+
+(player-update! set-player-health! player1 10)
+
+(player-health player1)
+
+(define pie 3)
+
+(define (piece str)
+  (substring str 0 pie))
+
+(piece "Lsa")
+
+(define my-list '("Hop" "Hi" "rdy"))
+
+(list-ref my-list 1)
+
+(length my-list)
+
+(define (find-six? x)
+  (if (= x 6)
+      #t
+      #f))
+
+(ormap find-six? '(1 2 3 4 5))
