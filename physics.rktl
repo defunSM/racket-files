@@ -27,7 +27,7 @@
   (let* ([
           result (apply * rest)])))
 
-(apply num? (num "10" "kg") (num "10" "kg"))
+(map num-value '((num "10" "kg")))
 
 (mul 1 2 3)
 (parse-data "10 kg")
