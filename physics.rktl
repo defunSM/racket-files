@@ -23,9 +23,15 @@
 (define data (num 10 "kg"))
 
 
+;; Continue to work on this so that units can be multiplied.
+
 (define (mul . rest)
   (let* ([
           result (apply * rest)])))
+
+(define (divide . rest)
+  (let* ([
+          result (apply / rest)])))
 
 (map num-value '((num "10" "kg")))
 
