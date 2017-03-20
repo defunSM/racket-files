@@ -2,7 +2,7 @@
 
 ;; These are prefixes and are used to convert between different units.
 
-(define prefixes '("t" "g" "M" "k" "" "h" "da" "d" "c" "m" "u" "n" "p" "f"))
+(define prefixes '("t" "g" "M" "k" "" "m" "u" "n" "p" "f"))
 
 (define time-prefixes '("s" "min" "hr" "day" "month" "yr"))
 

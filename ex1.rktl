@@ -305,3 +305,15 @@
       #f))
 
 (ormap find-six? '(1 2 3 4 5))
+
+(define (my-range num)
+  (let loop ((token num)
+             (lst '()))
+    (cond ((equal? token 0) lst)
+          (else (loop (- token 1) (cons token lst))))))
+
+(my-range 10)
+
+(cons 1 2)
+
+(time (filter even? (my-range 1000)))
