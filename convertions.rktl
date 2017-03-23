@@ -8,7 +8,11 @@
            time-prefixes
            index-of
            convert-units
-           si-unit)
+           si-unit
+           (struct-out num))
+
+
+  (struct num (value units))
 
   (define prefixes '("t" "g" "M" "k" "" "m" "u" "n" "p" "f"))
   (define time-prefixes '("s" "min" "hr" "day" "month" "yr"))
