@@ -19,5 +19,14 @@
 
 
 ;; to do later.
-(define (college-func-with-debt-2 n rate initial final (debt 0))
-  )
+(define (catch-up-salary n c1 c2 (debt 0))
+  (/ (+ (* n c1) debt) (- c1 c2)))
+
+(* 1.0 (catch-up-salary 4 24000 19000 30000))
+
+(define (sigma f a b)
+  (if (= a b)
+      0
+      (+ (f a) (sigma f (+ a 1) b))))
+
+(time (round (sigma (lambda (x) (/ 1 x)) 1 2000)))
