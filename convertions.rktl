@@ -1,7 +1,6 @@
 (require racket)
 
 ;; Module convertions
-;; bug with num struct not being included. Must fix.
 
 (module convertions racket
   (provide prefixes
@@ -10,7 +9,6 @@
            convert-units
            si-unit
            (struct-out num))
-
 
   (struct num (value units))
 
@@ -40,9 +38,6 @@
                      [new-value (* factor (num-value current))])
                 (num new-value ""))))
         (print "False"))))
-
-
-
 
 ;; These are prefixes and are used to convert between different units.
 
@@ -93,3 +88,5 @@
 
 
 (define a (num 30 "g"))
+
+(num-value (si-unit a))
