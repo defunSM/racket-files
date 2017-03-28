@@ -57,30 +57,16 @@
 
 (map (lambda (x) (num-value (eval x))) '((num 10 "kg") (num 20 "kg")))
 
-()
-
-
 (define (divide . rest)
   (let* ([result (apply / rest)])
     result))
-
-
 
 (map num-value '((num "10" "kg")))
 
 (mul 1 2 3)
 (parse-data "10 kg")
 
-
-
-
-
-
-
 (parse-data "12.9 kg")
-
-
-
 
 (define (electric-flux #:electric-potential E #:area A)
   (cond ))
@@ -90,9 +76,5 @@
 
 (define (force #:mass (m 70) #:acceleration (a acc-on-earth))
   (* m a))
-
-
-
-(force)
 
 (kinetic-energy #:velocity 5)
